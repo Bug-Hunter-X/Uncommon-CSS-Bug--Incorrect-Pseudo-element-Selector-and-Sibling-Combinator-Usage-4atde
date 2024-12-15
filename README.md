@@ -1,0 +1,1 @@
+This repository demonstrates a common yet subtle bug in CSS related to pseudo-element selectors and sibling combinators. The `bug.css` file shows the incorrect usage, while `bugSolution.css` provides the corrected version.  The issue highlights the importance of proper selector construction when dealing with pseudo-elements, especially :before and :after.
