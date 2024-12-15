@@ -1,0 +1,20 @@
+The solution involves correctly nesting selectors to style pseudo-elements.  For example, instead of:
+
+```css
+/* Incorrect */
+.element::before { color: blue; }
+```
+
+Use the following:
+
+```css
+/* Correct */
+.element {
+  &:before {
+    content: "Text";
+    color: blue;
+  }
+}
+```
+
+If you encounter issues with sibling combinators alongside pseudo-elements, restructuring your CSS may be required to achieve the desired styling effect without invalid selectors.
