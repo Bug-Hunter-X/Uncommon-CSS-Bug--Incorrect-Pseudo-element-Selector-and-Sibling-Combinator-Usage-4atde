@@ -1,0 +1,21 @@
+The following CSS code snippet attempts to style an element based on the presence of a pseudo-element (:before), but it uses an invalid selector:
+
+```css
+/* Incorrect selector */
+.element::before { /* styles here */ }
+```
+
+This is problematic because the pseudo-element's styles should be defined within its own declaration block. A correct way is to nest the pseudo-element selector within the main element's selector:
+
+```css
+/* Correct selector */
+.element {
+  /* styles for the element itself */
+  &:before {
+      content: 'This text will appear before the element';
+      /* Add more styles for :before */
+  }
+}
+```
+
+Another subtle issue arises when using a sibling combinator alongside a pseudo-element. A selector such as `.element + ::before` is invalid. In such cases, consider adjusting your CSS structure to ensure appropriate targeting.
